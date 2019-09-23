@@ -13,6 +13,18 @@ CREATE TABLE `user` (
   `avatar_url` varchar(200) DEFAULT '' comment '头像',
   PRIMARY KEY (`id`)
 );
+
+
 ALTER TABLE `user` ADD UNIQUE (`username`);
 ALTER TABLE `user` ADD UNIQUE (`email`);
 ALTER TABLE `user` ADD UNIQUE (`phone`);
+
+DROP TABLE IF EXISTS `WTT`;
+CREATE TABLE `WTT` (
+  `name`  varchar(50) DEFAULT NULL,
+  `gender` varchar(50) DEFAULT NULL,
+  `age` int(20) NOT NULL,
+  `city` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`name`)
+
+);
