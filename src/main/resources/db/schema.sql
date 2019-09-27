@@ -21,6 +21,7 @@ ALTER TABLE `user` ADD UNIQUE (`phone`);
 
 DROP TABLE IF EXISTS `WTT`;
 CREATE TABLE `WTT` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `name`  varchar(50) DEFAULT NULL,
   `gender` varchar(50) DEFAULT NULL,
   `age` int(20) NOT NULL,
@@ -28,3 +29,4 @@ CREATE TABLE `WTT` (
   PRIMARY KEY (`name`)
 
 );
+
