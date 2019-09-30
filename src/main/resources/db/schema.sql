@@ -26,7 +26,7 @@ CREATE TABLE `WTT` (
   `gender` varchar(50) DEFAULT NULL,
   `age` int(20) NOT NULL,
   `city` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`name`)
+  PRIMARY KEY (`id`)
 
 );
 
