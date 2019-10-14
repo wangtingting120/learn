@@ -17,4 +17,8 @@ public class Wtt {
     private String gender;
     private int age;
     private String city;
+	public void setAvatar(String string) {
+	}
+	public void setWttname(String keyword) {
+	}
 }
