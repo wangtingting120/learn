@@ -42,15 +42,11 @@ public class WttService {
         wttDao.save(wtt);
     }
 
-	public List<Wtt> searchWtts(String keyword) {
-		return null;
-    }
-   
 
         public List<Wtt> searchWtts(String keyword) {
             Wtt wtt= new Wtt();
-            wtt.setWttname(keyword);
-            ExampleMatcher matcher = ExampleMatcher.matching().withMatcher("name", match->match.startsWith());
+            wtt.setName(keyword);
+            ExampleMatcher matcher = ExampleMatcher.matching().withMatcher("name", match->match.contains());
             Example<Wtt> example = Example.of(wtt, matcher);
             Sort sort = new Sort(Direction.DESC, "id");
             return wttDao.findAll(example, sort);
